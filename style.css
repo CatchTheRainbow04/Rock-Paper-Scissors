@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: soulmeh;
+}
+@font-face {
+    font-family: soulmeh;
+    src: url(./fonts/soulmeh/Soulmeh.otf);
+}
+main{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(./img/sn-rockpaper.jpg);
+    background-size: cover;
+    line-height: 50px;
+}
+.title {
+    display: flex;
+    font-size: 50px;
+    z-index: 10;
+    margin-bottom: 15vh;
+}
+p{
+    pointer-events: none;
+}
+.playerMove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playerMove button {
+    margin: 20px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 30%;
+    transition: 500ms ease;
+    border: none;
+    box-shadow: 3px 10px 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+.playerMove button:hover {
+    background-color: aqua;
+}
+.playerMove button:hover img {
+    transform: scale(1.2);
+}
+.playerMove button img  {
+    width: 75%;
+    transition: 500ms ease;
+}
+#reset {
+    border: none;
+    background: transparent;
+    width: 75px;
+    height: 75px;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+#reset img {
+    width: 50%;
+    transition: 500ms ease;
+}
+#reset:hover img {
+    transform: scale(1.3);
+}
