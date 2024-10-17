@@ -5,25 +5,28 @@ const score = JSON.parse(localStorage.getItem('score'));
 
 document.getElementById("rock").addEventListener("click", function () {
   computer = getComputerChoice();
+  detCom = `<img class = "detResult" src="./img/${computer}.png">`;
   playerChoice = this.value;
   result = determineWinner(playerChoice, computer);
-  document.getElementById("Result").innerHTML = `You selected ${playerChoice} , Computer selected ${computer} , You ${result} !`;
+  document.getElementById("Result").innerHTML = `You selected <img class = "detResult" src="./img/${playerChoice}.png"> , Computer selected ${detCom} , You ${result} !`;
   handleGameResult(result);
   updateResult();
 });
 document.getElementById("paper").addEventListener("click", function () {
   computer = getComputerChoice();
+  detCom = `<img class = "detResult" src="./img/${computer}.png">`;
   playerChoice = this.value;
   result = determineWinner(playerChoice, computer);
-  document.getElementById("Result").innerHTML = `You selected ${playerChoice} , Computer selected ${computer} , You ${result} !`;
+  document.getElementById("Result").innerHTML = `You selected <img class = "detResult" src="./img/${playerChoice}.png"> , Computer selected ${detCom} , You ${result} !`;
   handleGameResult(result);
   updateResult();
 });
 document.getElementById("scissors").addEventListener("click", function () {
   computer = getComputerChoice();
+  detCom = `<img class = "detResult" src="./img/${computer}.png">`;
   playerChoice = this.value;
   result = determineWinner(playerChoice, computer);
-  document.getElementById("Result").innerHTML = `You selected ${playerChoice} , Computer selected ${computer} , You ${result} !`;
+  document.getElementById("Result").innerHTML = `You selected <img class = "detResult" src="./img/${playerChoice}.png"> , Computer selected ${detCom} , You ${result} !`;
   handleGameResult(result);
   updateResult();
 });
@@ -31,7 +34,7 @@ document.getElementById("reset").addEventListener("click",function (){
   score.draw = 0;
   score.win = 0;
   score.lose = 0;
-  document.getElementById("Result").innerHTML = "-";
+  document.getElementById("Result").innerHTML = "";
   updateResult();
 })
 
